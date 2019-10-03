@@ -81,7 +81,13 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Setup Intro</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Setup Intro</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-start">Getting Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sdk">SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-structure">Module Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#libraries-final-step">Libraries (Final Step)</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -149,14 +155,51 @@
   <div class="section" id="developer-setup-intro">
 <h1>Developer Setup Intro<a class="headerlink" href="#developer-setup-intro" title="Permalink to this headline">¶</a></h1>
 <p>This page is used as a guide for developer of soot-skeleton. One
-thing to note we’ll will gradually make this to be a maven project, while
-so far the developing is still based on IDE and vertion control.</p>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;This is a test&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
+thing to notice is that we’ll will gradually make this to be a maven project, while
+so far the developing is still based on IDE and git version control. For those who are new to this project,
+this doc is a good way to start. And I’ll keep updating this page as developing the soot-skeleton.</p>
+<div class="section" id="getting-start">
+<h2>Getting Start<a class="headerlink" href="#getting-start" title="Permalink to this headline">¶</a></h2>
+<p>For this project, the recommended IDE is intellij. The main language we’ll use is Java, and the jdk version we prefer is
+1.8. After you clone the repo from github and open the project in Intellij,
+so press <kbd>⌘ Command</kbd> + ; . (this shortcut is for mac, for windows or linux please go to file/Project
+Structure.) If you do it properly, following Project Structure page is going to pop up.</p>
+<p><img alt="Alt text" src="_images/project_structure.png" /></p>
+<p><br/><br/></p>
+</div>
+<div class="section" id="sdk">
+<h2>SDK<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h2>
+<p>Then we need to setup the developing Java jdk. Press the option that shows “<No SDK>” and select the Java jdk version 1.8.
+, and click OK. Then, in the Project language level option, select “8 Lambdas, type …”</p>
+<p><img alt="Alt text" src="_images/jdk.png" /></p>
+<p>Then the project structure should look the same as below.</p>
+<p><img alt="Alt text" src="_images/jdk_final.png" /></p>
+<p><br/><br/></p>
+</div>
+<div class="section" id="module-structure">
+<h2>Module Structure<a class="headerlink" href="#module-structure" title="Permalink to this headline">¶</a></h2>
+<p>The next thing is to setup the module structure. First, click the module at the side bar. Below picture is what you would
+expect to see.</p>
+<p><img alt="Alt text" src="_images/module_structure.png" /></p>
+<p><br/><br/></p>
+<p>Then click src folder, and click the blue “Sources” button to make the directory as a source root. Then you will expect
+to see following picture.</p>
+<p><img alt="Alt text" src="_images/module_structure_final.png" /></p>
+<p><br/><br/></p>
+</div>
+<div class="section" id="libraries-final-step">
+<h2>Libraries (Final Step)<a class="headerlink" href="#libraries-final-step" title="Permalink to this headline">¶</a></h2>
+<p>The final step is to link project to the lib we’ll use. Just lick the “Libraries” button at the side bar. You will something
+just like the below picture.</p>
+<p><img alt="Alt text" src="_images/lib.png" /></p>
+<p>Then click the add sign that shows “New Project Library”. And go ahead and find the lib folder in soot-skeleton and click
+OK. AND WE ARE DONE!</p>
+<p><img alt="Alt text" src="_images/lib_selection.png" /></p>
+<p>Finally, let’s check the Analysis.java file in the SootExample folder. You will see something like below. Notice that
+you can directly run this file. This developing approach will be temporary, but we integrated Maven framework into this
+project, we’ll move to test and develop things upon Maven framework. But still, so far we will use it as our main source.
+After we integrate Maven, I’ll update this tutorial file.</p>
+<p><img alt="Alt text" src="_images/afterall.png" /></p>
 </div>
 </div>
 
